@@ -1,0 +1,33 @@
+/* Сброс стилей */
+
+/* Сброс отступов и полей для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Установка стандартных шрифтов и размеров текста */
+body {
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+/* Убираем маркеры у списков */
+ul, ol {
+    list-style: none;
+}
+
+/* Убираем подчеркивание у ссылок */
+a {
+    text-decoration: none;
+}
+
+/* Сброс стандартных стилей для элементов форм */
+input, textarea, button {
+    border: none;
+    outline: none;
+}
+
+input::-webkit-input-placeholder { color: #66687A; opacity: 1; transition: opacity 0.2s ease; }
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.2s ease;}
