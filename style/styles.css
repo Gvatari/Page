@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .main {
-  background-image: url("images/humans.png");
+  background-image: url("/images/humans.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -124,7 +124,7 @@
 }
 
 .main_second {
-  background-image: url("images/world.png");
+  background-image: url("/images/world.png");
   background-color: #272733;
   background-repeat: no-repeat;
   background-size: cover;
@@ -153,6 +153,8 @@
   color: #3E9CDC;
 }
 .main_second_header_description {
+  display: flex;
+  justify-content: center;
   margin-top: 30px;
   font-size: 18px;
   color: #BBB;
@@ -296,14 +298,14 @@
   appearance: none;
   width: 37px;
   height: 37px;
-  background: url("images/slider-thumb.svg") no-repeat;
+  background: url("/images/slider-thumb.svg") no-repeat;
   background-size: contain;
   cursor: pointer;
   margin-top: -14px;
 }
 .main_attach_group_range-item::-webkit-slider-runnable-track {
   height: 8px;
-  background: url("images/runnable-track.svg") no-repeat;
+  background: url("/images/runnable-track.svg") no-repeat;
   background-size: cover;
   cursor: pointer;
   margin-left: -1px;
