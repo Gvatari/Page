@@ -41,3 +41,29 @@ input:focus::-webkit-input-placeholder {
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
+
+input::-moz-input-placeholder {
+  color: #66687A;
+  opacity: 1;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+input:focus::-moz-input-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+input::-ms-input-placeholder {
+  color: #66687A;
+  opacity: 1;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+input:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}

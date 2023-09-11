@@ -16,6 +16,7 @@
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 1;
 
     &_name {
         font-family: Raleway;
@@ -266,7 +267,78 @@
         top: 47px;
         width: inherit;
         left: -1px;
-        padding: 0 14px 0 10px;
+        padding-left: 14px;
+        max-height: 172px;
+        overflow-y: auto;
+    }
+
+    /* Chrome Safari */
+    /* total width */
+    &_system-dropdown::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* background of the scrollbar except button or resizer */
+    &_system-dropdown::-webkit-scrollbar-track {
+        background-color: #3d4050;
+        border-radius: 4px;
+    }
+
+    /* scrollbar itself */
+    &_system-dropdown::-webkit-scrollbar-thumb {
+        background-color: #42A9ED;
+        border-radius: 16px;
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &_system-dropdown::-webkit-scrollbar-button {
+        display:inline-block;
+    }
+
+    /* Mozilla */
+    /* total width */
+    &_system-dropdown::-moz-scrollbar {
+        width: 8px;
+    }
+
+    /* background of the scrollbar except button or resizer */
+    &_system-dropdown::-moz-scrollbar-track {
+        background-color: #3d4050;
+        border-radius: 4px;
+    }
+
+    /* scrollbar itself */
+    &_system-dropdown::-moz-scrollbar-thumb {
+        background-color: #42A9ED;
+        border-radius: 16px;
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &_system-dropdown::-moz-scrollbar-button {
+        display:inline-block;
+    }
+
+    /* Edge */
+    /* total width */
+    &_system-dropdown::-ms-scrollbar {
+        width: 8px;
+    }
+
+    /* background of the scrollbar except button or resizer */
+    &_system-dropdown::-ms-scrollbar-track {
+        background-color: #3d4050;
+        border-radius: 4px;
+    }
+
+    /* scrollbar itself */
+    &_system-dropdown::-ms-scrollbar-thumb {
+        background-color: #42A9ED;
+        border-radius: 16px;
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &_system-dropdown::-ms-scrollbar-button {
+        display:inline-block;
     }
 
     &_system-dropdown-item {
@@ -321,9 +393,10 @@
         background-color: transparent;
         -webkit-appearance: none;
         appearance: none;
+        margin-left: 1px;
     }
 
-    /* Стили для регулятора */
+    /* Стили для регулятора Chrome Safari*/
     &_range-item::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
@@ -337,6 +410,48 @@
 
     /* Стили для линии ползунка */
     &_range-item::-webkit-slider-runnable-track {
+        height: 8px;
+        background: url('../images/runnable-track.svg') no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        margin-left: -1px;
+    }
+
+    /* Стили для регулятора Mozilla */
+    &_range-item::-moz-slider-thumb {
+        -moz-appearance: none;
+        appearance: none;
+        width: 37px;
+        height: 37px;
+        background: url('../images/slider-thumb.svg') no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        margin-top: -14px;
+    }
+
+    /* Стили для линии ползунка */
+    &_range-item::-moz-slider-runnable-track {
+        height: 8px;
+        background: url('../images/runnable-track.svg') no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        margin-left: -1px;
+    }
+
+    /* Стили для регулятора Edge */
+    &_range-item::-ms-slider-thumb {
+        -ms-appearance: none;
+        appearance: none;
+        width: 37px;
+        height: 37px;
+        background: url('../images/slider-thumb.svg') no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        margin-top: -14px;
+    }
+
+    /* Стили для линии ползунка */
+    &_range-item::-ms-slider-runnable-track {
         height: 8px;
         background: url('../images/runnable-track.svg') no-repeat;
         background-size: cover;
@@ -406,6 +521,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 12px;
 
     &_protection_of_rights {
         font-size: 13px;
@@ -450,4 +566,270 @@
         cursor: pointer;
     }
     
+}
+
+
+/* Responsive */
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+    .main_content { 
+        margin: 103px 0 0 202px;
+    }
+
+    .main_circles {
+        width: fit-content;
+    
+        &_description-item {
+            display: flex;
+            font-size: 13px;
+        }
+    
+        &_top-item {
+            margin: 0 14px 0 11px;
+        }
+
+        img {
+            width: 80px;
+        }
+
+    }
+
+    .main_inputs {
+        flex-direction: column;
+    }
+
+    .main_attach_group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+    .main_content { 
+        margin: 103px 0 0 62px;
+        &_name {
+            font-size: 42px;
+        }
+    }
+
+    .main_circles {
+
+        &_description-item {
+            width: 116px;
+        }
+
+        &_top {
+            gap: 35px;
+        }
+    
+        &_top-item {
+            display: none;
+        }
+
+        img {
+            width: 80px;
+        }
+
+    }
+
+    .main_attach_group {
+        &_range {
+            width: 746px;
+        }
+    }
+
+    .main_footer {
+        &_vertical-line {
+            margin: 0 12px;
+        }
+
+        &_vertical-line:last-of-type {
+            margin: 0 12px 0 0;
+        }
+
+        &_payment_system {
+            margin-right: 12px;
+        }
+    }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+    .main_header {
+        &_menu {
+            gap: 18px;
+        }
+    }
+
+    .main_content { 
+        margin: 103px 0 0 42px;
+        &_name {
+            font-size: 40px;
+        }
+
+        &_btn {
+            justify-content: center;
+        }
+    }
+
+    .main_circles {
+
+        &_description-item {
+            width: 107px;
+            word-wrap: break-word;
+            display: block;
+        }
+
+        &_top {
+            gap: 35px;
+        }
+
+        img {
+            width: 72px;
+        }
+
+    }
+
+    .main_attach_group {
+        &_range {
+            width: 550px;
+        }
+    }
+
+    
+    .main_footer {
+        &_protection_of_rights {
+            font-size: 10px;
+        }
+
+        &_payment_system-name {
+            font-size: 10px;
+        }
+
+        &_contacts {
+            margin-right: 8px;
+        }
+
+        &_contacts-name {
+            font-size: 10px;
+        }
+    }
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+    .main {
+        background-position: -806px center;
+    }
+
+    .main_header {
+        flex-direction: column;
+        &_name {
+            font-size: 22px;
+        }
+        &_menu {
+            gap: 10px;
+        }
+    }
+
+    .main_content { 
+        margin: 72px 4px 0 4px;
+        padding-bottom: 114px;
+
+        &_name {
+            font-size: 27px;
+        }
+
+        &_info-name {
+            font-size: 19px;
+        }
+    }
+
+    .main_second {
+        &_header {
+            width: 316px;
+        }
+
+        &_header_name {
+            font-size: 26px;
+        }
+
+        &_header_description {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 22px;
+        }
+    }
+
+    .main_circles {
+        &_description {
+            padding: 0 7.5px 0 7.5px;
+        }
+
+        &_description-item {
+            width: 61px;
+        }
+
+        &_top {
+            gap: 12px;
+        }
+
+        img {
+            width: 48px;
+        }
+
+    }
+
+    .main_inputs {
+        flex-direction: column;
+
+        &_system {
+            width: 316px;
+        }
+
+        &_email {
+            width: 316px !important;
+        }
+
+        &_name {
+            width: 316px !important;
+        }
+    }
+
+    .main_attach_group {
+        &_range {
+            width: 312px;
+        }
+
+        &_range-name {
+            font-size: 15px;
+        }
+
+        &_range-percent {
+            font-size: 15px;
+        }
+
+        &_button {
+            width: 316px;
+        }
+    }
+
+    .main_submit {
+        width: 316px;
+    }
+
+    .main_footer {
+        padding: 4px 12px;
+        flex-direction: column;
+        gap: 4px;
+        height: auto;
+
+        &_vertical-line {
+            display: none;
+        }
+    }
+
 }
