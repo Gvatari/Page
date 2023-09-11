@@ -1,11 +1,9 @@
 .main {
-    // height: 100vh;
     background-image: url('../images/humans.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    // overflow: hidden;
 }
 
 .main_header {
@@ -140,14 +138,12 @@
 }
 
 .main_second {
-    // height: 1000px;
     background-image: url('../images/world.png');
     background-color: #272733;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    // overflow: hidden;
     display: flex;
     align-items: center;
     flex-direction: column;
